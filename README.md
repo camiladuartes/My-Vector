@@ -1,2 +1,12 @@
-# My-Vector
-University Project to make a Sequential Container with a Dynamic Vector similar to std::vector in C++
+# Vector class implementation
+
+Implements a sequential container with dynamic memory.
+
+The purpose is to replicate the STL's `std::vector` behavior.
+
+# Compilation and Execution:
+1. `mkdir build`
+2. `cd build`
+3. `cmake -G "Unix Makefiles" ..`
+4. `make`
+5. `./driver_array`
