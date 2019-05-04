@@ -11,7 +11,7 @@ namespace sc{ // sc: Sequence container
             using size_type = unsigned long; //!< The size type.
             using value_type = T; //!< The value type.
         //=== Private data
-        public:
+        private:
             T *data; //aloca durante o construtor.
             size_type size_; //!< Número de elementos atualmente no vector.
             size_type capacity_; //!< Capacidade máxima atual do vector (se completar dobra a capacidade/memória).
@@ -181,11 +181,6 @@ namespace sc{ // sc: Sequence container
             /// Returns the object at the beginning of the list.
             const T& front() const{
                 return data[0];
-            }
-
-            /// Replaces the content of the list with count copies of value.
-            void assign(size_type count, const T& value){
-
             }
     };
 }
