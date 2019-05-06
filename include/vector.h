@@ -1,3 +1,9 @@
+/*!
+ * \file vector.h
+ * \author Camila
+ * \date May, 2
+ */
+
 #ifndef VECTOR_H
 #define VECTOR_H
 
@@ -126,8 +132,7 @@ namespace sc{ // sc: Sequence container
             /// Adds value to the front of the list.
             void push_front(const T &value){
                 T *first = data;
-                T *last;
-                last = &data[size_];
+                T *last = &data[size_];
                 vector<T> clone(first, last); //clone receives the data values
                 size_ += 1;
                 if(size_ >= capacity_){
@@ -182,7 +187,7 @@ namespace sc{ // sc: Sequence container
             const T& front() const{
                 return data[0];
             }
-        
+
             /// Replaces the content of the list with count copies of value.
             void assign(size_type count, const T& value){
                 size_ = count;
@@ -191,6 +196,28 @@ namespace sc{ // sc: Sequence container
                 for(auto i(0u); i < count; i++){
                     data[i] = value;
                 }
+            }
+
+        //=== [III] Operations exclusive to dynamic array implementation
+            /// Returns the object at the index pos in the array, with no bounds-checking.
+            T & operator[](size_type pos){
+                return data[pos];
+            }
+
+            /// Returns the object at the index pos in the array, with bounds-checking.
+            /*!
+            * @throw Generates `out_of_range` exception if you enter the position 
+            * beyond the bounds of the list.
+            */
+            T & at (size_type pos){
+                if(pos >= size_){
+                    throw std::out_of_range("[vector::at()] Position entered beyond vector boundaries.");
+                }
+                return data[pos];
+            }
+
+            size_type capacity() const{
+                return capacity_;
             }
     };
 }
