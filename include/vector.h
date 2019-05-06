@@ -182,6 +182,16 @@ namespace sc{ // sc: Sequence container
             const T& front() const{
                 return data[0];
             }
+        
+            /// Replaces the content of the list with count copies of value.
+            void assign(size_type count, const T& value){
+                size_ = count;
+                capacity_ = count;
+                data = new T[size_*2];
+                for(auto i(0u); i < count; i++){
+                    data[i] = value;
+                }
+            }
     };
 }
 
