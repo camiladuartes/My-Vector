@@ -8,7 +8,7 @@ The purpose is to replicate the STL's `std::vector` behavior.
 
 Camila Duarte
 
-## Compilation(with cmake):
+## Compilation(with CMake):
 1. `mkdir build`
 2. `cd build`
 3. `cmake -G "Unix Makefiles" ..`
