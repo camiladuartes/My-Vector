@@ -4,7 +4,11 @@ Implements a sequential container with dynamic memory.
 
 The purpose is to replicate the STL's `std::vector` behavior.
 
-## Compilation:
+## Student:
+
+Camila Duarte
+
+## Compilation(with cmake):
 1. `mkdir build`
 2. `cd build`
 3. `cmake -G "Unix Makefiles" ..`
