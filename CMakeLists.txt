@@ -22,14 +22,14 @@ include_directories( include )
 
 #=== Driver target ===
 
-add_executable( driver_array "src/driver_vector.cpp" )
+add_executable( driver_vector "src/driver_vector.cpp" )
 
 #=== Test target ===
 
-## Add test files.
-#file(GLOB SOURCES_TEST "test/*.cpp")
-##add_executable(run_tests ${SOURCES_TEST})
-#add_executable(run_tests "test/main.cpp" )
-#
-## Link with the google test libraries.
-#target_link_libraries(run_tests PRIVATE ${GTEST_LIBRARIES} PRIVATE pthread )
+# Add test files.
+file(GLOB SOURCES_TEST "test/*.cpp")
+#add_executable(run_tests ${SOURCES_TEST})
+add_executable(run_tests "test/main.cpp" )
+
+# Link with the google test libraries.
+target_link_libraries(run_tests PRIVATE ${GTEST_LIBRARIES} PRIVATE pthread )
