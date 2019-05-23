@@ -604,5 +604,4 @@ namespace sc{ // sc: Sequence container
         }
 }
 
-
 #endif
